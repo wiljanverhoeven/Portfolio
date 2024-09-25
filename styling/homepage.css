@@ -97,43 +97,52 @@ main{
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: blueviolet;
-    animation: test 30s linear infinite;
+    animation: test 60s linear infinite;
     margin-top: -38%;
     margin-left: 30%;
+    filter: brightness(0.8);
     
 }
 
 .moon {
-    z-index: -1;
     position: absolute;
     height: 100%;
 }
 
 @keyframes test {
+    
     0% {
+        
+        opacity: 1;
 		transform: translate(0, 0);
 	}
 
     10% {
-        transform: translate(-100%, -100%);
+        filter: brightness(1);
+        transform: translate(-97%, -97%);
         
     }
 
-    30% {
+    10.5%{
+        transform: translate(-97%, -97%);
+    }
+
+    35% {
         z-index: 1;
     }
 
-    60%{
-        background-color: blueviolet;
-    }
+    80% {
+        filter: brightness(1);
 
-    85% {
-        background-color: black;
+    }
+    90% {
+        opacity: 1;
+        z-index: 1;
     }
     100% {
-        background-color: transparent;
-        transform: translate(350%, 350%);
+        filter: brightness(0.1);
+        opacity: 0;
+        transform: translate(260%, 260%);
     }
 }
     

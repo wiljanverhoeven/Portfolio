@@ -17,6 +17,7 @@ function random(min, max) {
     // Add them to the body
     const star = document.createElement('div');
     star.style.position = 'absolute';
+    star.style.zIndex = '-1';
     star.style.left = xPos + '%';
     star.style.top = yPos + '%';
     star.style.opacity = alpha;
