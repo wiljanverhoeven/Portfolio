@@ -59,8 +59,7 @@ main{
     transform: scaleX(-1);
     margin: auto;
     z-index: 0;
-    
-
+    filter: brightness(0.8);
  }
 
 .menu {
@@ -100,8 +99,7 @@ main{
     animation: test 60s linear infinite;
     margin-top: -38%;
     margin-left: 30%;
-    filter: brightness(0.8);
-    
+    filter: brightness(0.7);
 }
 
 .moon {
@@ -118,7 +116,7 @@ main{
 	}
 
     10% {
-        filter: brightness(1);
+        filter: brightness(0.7);
         transform: translate(-97%, -97%);
         
     }
@@ -132,7 +130,7 @@ main{
     }
 
     80% {
-        filter: brightness(1);
+        filter: brightness(0.8);
 
     }
     90% {
