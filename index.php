@@ -18,9 +18,9 @@
                 <div class="left">
                     
                     <ul class="menu">
-                        <li><h1 class="selection">PORTFOLIO</h1></li>
-                        <li><h1 class="selection">OVER MIJ</h1></li>
-                        <li><h1 class="selection">CONTACT</h1></li>
+                        <li><a href="views/portfolio.php" class="selection">PORTFOLIO</a></li>
+                        <li><a class="selection">OVER MIJ</a></li>
+                        <li><a class="selection">CONTACT</a></li>
                     </ul>
                     
                 </div>
