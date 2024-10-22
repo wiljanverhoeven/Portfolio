@@ -22,7 +22,7 @@
                     <ul class="menu">
                         <li><a href="views/portfolio.php" class="selection">PORTFOLIO</a></li>
                         <li><a href="views/overmij.php" class="selection">OVER MIJ</a></li>
-                        <li><a class="selection">CONTACT</a></li>
+                        <li><a href="views/contact.php" class="selection">CONTACT</a></li>
                     </ul>
                     
                 </div>
