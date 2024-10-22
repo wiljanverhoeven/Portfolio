@@ -1,5 +1,7 @@
 <!DOCTYPE html>
     <head>
+       
+        <link rel="stylesheet" href="css/common.css" >
         <link rel="stylesheet" href="css/homepage.css" >
         
     </head>
@@ -19,7 +21,7 @@
                     
                     <ul class="menu">
                         <li><a href="views/portfolio.php" class="selection">PORTFOLIO</a></li>
-                        <li><a class="selection">OVER MIJ</a></li>
+                        <li><a href="views/overmij.php" class="selection">OVER MIJ</a></li>
                         <li><a class="selection">CONTACT</a></li>
                     </ul>
                     

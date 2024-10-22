@@ -1,39 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-weight: bolder; 
-}
 
-
-body {
-    height: 100vh;
-    overflow: hidden;
-    background-color:black;
-}
-
-header {
-    height: 5%;
-    padding: 1em;
-    color: white;  
-}
-
-.home {
-    text-decoration: none;
-    color: white;
-}
-
-
-main{
-    height: 80%;
-} 
-
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-}
 
 .filters {
     border: 3px white solid;
@@ -66,10 +31,4 @@ main{
     height: 90%;
     width: 30%;
     margin: 30px;
-    
-}
-
-footer {
-    height: 11.6%;
-    
 }

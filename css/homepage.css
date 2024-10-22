@@ -1,38 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    font-weight: bolder; 
-}
-
-
-body {
-    height: 100vh;
-    overflow: hidden;
-    background-color:black;
-}
-
-header {
-    height: 5%;
-    padding: 1em;
-    color: white;
-    
-}
-
-
-main{
-    height: 80%;
-} 
-
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
 .left {
     height: 80%;
     display: flex;
@@ -147,8 +113,3 @@ main{
     }
 }
     
-
-footer {
-    height: 11.6%;
-    
-}
