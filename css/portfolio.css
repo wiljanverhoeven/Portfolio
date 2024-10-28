@@ -6,7 +6,7 @@
     height: 5%;
     width: 30%;
     position: absolute;
-    left: 10%;
+    left: 12%;
 }
 
 .title {
@@ -14,8 +14,6 @@
 }
 
 .projects-list {
-    border: 3px white solid;
-    border-radius: 50px;
     height: 80%;
     width: 80%;
     position: absolute;
@@ -26,9 +24,20 @@
 }
 
 .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 3px white solid;
     border-radius: 50px;
-    height: 90%;
+    height: 80%;
     width: 30%;
     margin: 30px;
 }
+
+.projectimg {
+    width: 100%; 
+    border-radius: 45px;
+    margin-bottom: 10%;
+}
+
+

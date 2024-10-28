@@ -3,13 +3,12 @@
        
         <link rel="stylesheet" href="css/common.css" >
         <link rel="stylesheet" href="css/homepage.css" >
+        <?php include 'dbconnect.php'; ?>
         
     </head>
     <body>
         
         <header >
-           
-
         </header>
         <script type="text/javascript" src="js/stars.js"></script>
         <main>

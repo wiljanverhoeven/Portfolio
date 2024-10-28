@@ -2,12 +2,14 @@
     <head>
         <link rel="stylesheet" href="../css/common.css" >
         <link rel="stylesheet" href="../css/overmij.css" >
+        <?php include '../dbconnect.php'; ?>
         
     </head>
     <body>
         
         <header >
            <a class="home" href="../">HOME</a>
+
 
         </header>
         <script type="text/javascript" src="../js/stars.js"></script>
