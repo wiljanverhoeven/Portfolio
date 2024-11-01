@@ -45,16 +45,27 @@
     height: 80%;
     width: 30%;
     margin: 30px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
 }
 
 .project:hover {
     transform: scale(1.01);
 }
+    
 
 .projectimg {
     width: 100%; 
     border-radius: 45px;
     margin-bottom: 10%;
 }
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 
 
