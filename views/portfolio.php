@@ -8,33 +8,57 @@
         
         <header >
            <a class="home" href="../">HOME</a>
-
         </header>
         <script type="text/javascript" src="../js/stars.js"></script>
         <main>
-        <div class="filters"></div>
-            <div class="container">
-                <h1 class="title">Projecten</h1>
-                <div class="projects-list">
+            <form class="filter" method="GET" action="">
+                <label  for="category">Filter op categorie:</label>
+                <select class="filter-select" name="categorie" id="categorie">
+                    <option value="">Alle</option>
+                    <option value="PHP">PHP</option>
+                    <option value="JAVA">JAVA</option>
+                </select>
+                <button class="filter-btn" type="submit">Filter</button>
+            </form>
 
-                <?php 
-                    // Prepare and execute the query outside of the loop
+        <div class="container">
+            <h1 class="title">Projecten</h1>
+            <div class="projects-list">
+
+            <?php 
+                // check voor filter
+                $categorie = isset($_GET['categorie']) ? $_GET['categorie'] : '';
+                
+                // maakt query met filter
+                if ($categorie) {
+                    // prepared statement
+                    $stmt = $pdo->prepare("SELECT * FROM projecten WHERE categorie = :categorie");
+                    $stmt->bindParam(':categorie', $categorie);
+                } else {
+                    // maakt query
                     $stmt = $pdo->prepare("SELECT * FROM projecten");
-                    $stmt->execute();
-                    $projecten = $stmt->fetchAll(PDO::FETCH_ASSOC); // Fetch all results into an associative array
+                }
+                
+                $stmt->execute();
+                $projecten = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    // Loop through each project fetched
-                    foreach ($projecten as $project) {
-                ?>
+                // displayed projecten
+                foreach ($projecten as $project) {
+            ?>
+                
                     <div class="project">
+                        <a href="project.php?idportfolios=<?php echo $project['idportfolios']; ?>" class="project-link">
                         <img class="projectimg" src="<?php echo "../images/", $project['imagesrc']; ?>" alt="project">
-                        <h3><?php echo ${"project"}["projectname"]; ?></h3>
-                        <p><?php echo ${"project"}["desc"]; ?></p>
+                        <h3><?php echo htmlspecialchars($project["projectname"]); ?></h3>
+                        <p><?php echo htmlspecialchars($project["desc"]); ?></p>
+                        </a>
                     </div>
-                <?php
-                    }
-                ?>
-                </div>
+
+            <?php
+                }
+            ?>
+            </div>
+        </div>
               
                     
                 

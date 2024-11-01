@@ -1,12 +1,24 @@
 
-
-.filters {
-    border: 3px white solid;
-    border-radius: 50px;
+.filter {
     height: 5%;
-    width: 30%;
+    width: 15%;
     position: absolute;
     left: 12%;
+}
+
+.filter-btn {
+    border: 3px white solid;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.filter-select {
+    border: 3px white solid;
+    border-radius: 50px;
+    width: 80%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .title {
@@ -21,6 +33,7 @@
     gap: 5px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .project {
@@ -32,12 +45,27 @@
     height: 80%;
     width: 30%;
     margin: 30px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
 }
+
+.project:hover {
+    transform: scale(1.01);
+}
+    
 
 .projectimg {
     width: 100%; 
     border-radius: 45px;
     margin-bottom: 10%;
 }
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 
 
