@@ -8,7 +8,7 @@
     <body>
         
         <header >
-           <a class="home" href="../">HOME</a>
+           <a class="nav" href="../">HOME</a>
 
         </header>
         <script type="text/javascript" src="../js/stars.js"></script>

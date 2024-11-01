@@ -17,10 +17,19 @@ header {
     color: white;  
 }
 
-.home {
+.nav {
     text-decoration: none;
     color: white;
+    margin: 3px;
 }
+
+.nav:hover {
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+    color: black;
+}
+
 
 
 main{
