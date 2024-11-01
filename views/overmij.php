@@ -18,17 +18,11 @@
             <div class="container">
             <div class="left">
                 <div class="information">
-                   <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                        optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                        obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                        nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                        tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                        quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
-                        sapiente officiis modi at sunt excepturi expedita sint?
-                    </p>
+                    <h1>Wiljan Verhoeven</h1>
+                    <h3>
+                        ik ben Wiljan Verhoeven, ik ben 19 jaar out en studeer momenteel AD software development op de hogeschool Windesheim.
+                        hiervoor heb ik al een diploma gehaald voor software developer op de ROC van Flevoland. Ik kan PHP, javascript en JAVA.
+                    </h3>
                     <div class="download" >
                         <a href="FileLink" download="newfilename">Download CV</a>
                     </div>
