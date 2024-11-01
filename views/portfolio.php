@@ -7,7 +7,7 @@
     <body>
         
         <header >
-           <a class="home" href="../">HOME</a>
+           <a class="nav" href="../">HOME</a>
         </header>
         <script type="text/javascript" src="../js/stars.js"></script>
         <main>
@@ -49,8 +49,7 @@
                     <div class="project">
                         <a href="project.php?idportfolios=<?php echo $project['idportfolios']; ?>" class="project-link">
                         <img class="projectimg" src="<?php echo "../images/", $project['imagesrc']; ?>" alt="project">
-                        <h3><?php echo htmlspecialchars($project["projectname"]); ?></h3>
-                        <p><?php echo htmlspecialchars($project["desc"]); ?></p>
+                        <h1><?php echo htmlspecialchars($project["projectname"]); ?></h1>
                         </a>
                     </div>
 

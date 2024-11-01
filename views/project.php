@@ -9,7 +9,9 @@
     <body>
         
         <header >
-        <a class="home" href="../">HOME</a>
+        <a class="nav" href="../">HOME</a>
+        <br>
+        <a class="nav" href="portfolio.php">BACK</a>
         </header>
         <script type="text/javascript" src="../js/stars.js"></script>
         <main>
@@ -26,10 +28,12 @@
                 if ($project) {
                 ?>
                     <div class="project-details">
-                        <h1><?php echo htmlspecialchars($project['projectname']); ?></h1>
-                        <img src="<?php echo "../images/", $project['imagesrc']; ?>" alt="project">
-                        <p><?php echo htmlspecialchars($project['desc']); ?></p>
-                
+                        <img  src="<?php echo "../images/", $project['imagesrc']; ?>" alt="project">
+                        <div class="pd2">
+                            <h1><?php echo htmlspecialchars($project['projectname']); ?></h1>
+                            <h3><?php echo htmlspecialchars($project['datum']); ?></h3>
+                            <h3><?php echo htmlspecialchars($project['desc']); ?></h3>
+                        </div>
                     </div>
                 <?php
                 } else {
