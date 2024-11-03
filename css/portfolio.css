@@ -1,71 +1,139 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
 
 .filter {
-    height: 5%;
-    width: 15%;
-    position: absolute;
-    left: 12%;
+  height: 5%;
+  width: 15%;
+  position: absolute;
+  left: 12%;
 }
 
 .filter-btn {
-    border: 3px white solid;
-    border-radius: 50px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+  border: 3px white solid;
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .filter-select {
-    border: 3px white solid;
-    border-radius: 50px;
-    width: 80%;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+  border: 3px white solid;
+  border-radius: 50px;
+  width: 80%;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .title {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .projects-list {
-    height: 80%;
-    width: 80%;
-    position: absolute;
-    top: 16%;
-    gap: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  height: 60%;
+  width: 80%;
+  position: absolute;
+  top: 16%;
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px white solid;
-    border-radius: 50px;
-    height: 80%;
-    width: 30%;
-    margin: 30px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 3px white solid;
+  border-radius: 50px;
+  height: 80%;
+  width: 30%;
+  margin: 30px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
 .project:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
-    
 
 .projectimg {
-    width: 100%; 
-    border-radius: 45px;
-    margin-bottom: 10%;
+  width: 100%;
+  margin-bottom: 10%;
 }
 
 .project-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
+@media only screen and (max-width: 1605px) {
+  .filter {
+    width: 20%;
+  }
+}
 
+@media only screen and (max-width: 1205px) {
+  .filter {
+    width: 27%;
+  }
+}
+@media only screen and (max-width: 905px) {
+  .projects-list {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    border: 3px white solid;
+    border-radius: 50px;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .projectimg {
+    margin: 0;
+    width: 50%;
+  }
+  .filter {
+    width: 40%;
+  }
 
+  .title {
+    margin-top: -10%;
+  }
+}
+
+@media only screen and (max-width: 603px) {
+  .filter {
+    width: 80%;
+  }
+  .title {
+    margin-top: -15%;
+  }
+
+  header {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+    #brightness-toggle{
+        margin-top: -50%;
+    }
+}

@@ -1,25 +1,33 @@
 .mail {
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-    display: flex;
-    margin: auto;
-    flex: 1;
-    padding: 1em;
-    border-left: solid 2px white;
-    border-right: solid 2px white;
-    margin: 1em;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  display: flex;
+  margin: auto;
+  flex: 1;
+  padding: 1em;
+  border-left: solid 2px white;
+  border-right: solid 2px white;
+  margin: 1em;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
 }
 
 .mail input {
-    line-height: 20px;
-    border-radius: 50px;
-    height: 30px;
-    width: 300px;
+  line-height: 20px;
+  border-radius: 50px;
+  height: 30px;
+  width: 300px;
 }
 
 #message {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
 }

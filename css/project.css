@@ -1,23 +1,42 @@
 .project-details {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
 }
 
 .pd2 {
-    height: 100%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 2px white solid;  
-    padding: 1%; 
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 2px white solid;
+  padding: 1%;
 }
 
 .project-details img {
-    width: 30%;
-    margin-right: 2%;
+  width: 30%;
+  margin-right: 2%;
+}
+
+@media only screen and (max-width: 750px) {
+  .project-details {
+    flex-direction: column;
+  }
+
+  .pd2 {
+    border-top: 2px white solid;
+    border-left: none;
+    height: 50%;
+    width: 80%;
+    text-align: center;
+  }
+  .project-details img {
+    width: 80%;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
 }

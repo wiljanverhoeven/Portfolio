@@ -1,49 +1,73 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
+
 .left {
-    height: 80%;
-    display: flex;
-    margin: auto;
-    flex: 1;
-    padding: 1em;
-    border-left: solid 2px white;
-    margin: 1em;
-    align-items: center;
+  height: 80%;
+  display: flex;
+  margin: auto;
+  flex: 1;
+  padding: 1em;
+  border-left: solid 2px white;
+  margin: 1em;
+  align-items: center;
 }
 
 .right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 80%;
-    flex: 2;
-    margin: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 80%;
+  flex: 2;
+  margin: 1em;
 }
 
 .picture {
-    border: 5px white solid;
-    border-radius: 50px;
-    height: 80%;
-    width: 30%;
+  border: 5px white solid;
+  border-radius: 50px;
 }
 
 .information {
-    font-size: large;
-    flex-direction: column;
+  font-size: large;
+  flex-direction: column;
 }
 
 .download {
-    display: flex;
-    justify-content: center;
-    height: 10%;
-    width: 20%;
-    border: 1px white solid;
-    border-radius: 50px;
-    background-color: white;
-    padding: 10px;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  height: 10%;
+  width: 20%;
+  border: 1px white solid;
+  border-radius: 50px;
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .download a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+  .download {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px) { 
+    header{
+        margin-bottom: 10%;
+    }
 }
