@@ -37,6 +37,8 @@
   flex-direction: column;
 }
 
+/* CV download knop */
+
 .download {
   display: flex;
   justify-content: center;
@@ -53,6 +55,8 @@
   text-decoration: none;
   color: black;
 }
+
+/* voor andere schermen */
 
 @media only screen and (max-width: 1200px) {
   .download {

@@ -27,7 +27,8 @@
                         hiervoor heb ik al een diploma gehaald voor software developer op de ROC van Flevoland. Ik kan PHP, javascript en JAVA.
                     </h3>
                     <div class="download">
-                        <a href="FileLink" download="../images/CV.pdf">Download CV</a>
+                        <!-- cv download -->
+                        <a href="FileLink" download="../images/CV.pdf">Download CV</a> 
                     </div>
                 </div>
 
@@ -46,6 +47,7 @@
 
     </footer>
     <script type="text/javascript">
+        //code voor de dim knop
         window.onload = function() {
             const body = document.body;
 

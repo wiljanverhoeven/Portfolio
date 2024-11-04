@@ -73,6 +73,7 @@
 
     </footer>
     <script type="text/javascript">
+        //code voor de dim knop
         window.onload = function() {
             const body = document.body;
 

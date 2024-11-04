@@ -1,3 +1,14 @@
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
+
+/* contact form styling */
+
 .mail {
   align-items: center;
   justify-content: center;
@@ -9,14 +20,6 @@
   border-left: solid 2px white;
   border-right: solid 2px white;
   margin: 1em;
-}
-
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: white;
 }
 
 .mail input {

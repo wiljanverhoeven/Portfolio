@@ -10,7 +10,7 @@
     $messageSent = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // get data
+        // haalt data op
         $name = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
         $subject = htmlspecialchars($_POST['subject']);
@@ -22,13 +22,13 @@
         $headers .= "Reply-To: " . $email . "\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-        // make email
+        // maak email
         $fullMessage = "Name: $name\n";
         $fullMessage .= "Email: $email\n\n";
         $fullMessage .= "Message:\n$message";
 
 
-        // Send amail
+        // stuur amail
         if (mail($to, $subject, $fullMessage, $headers)) {
             $messageSent = "Email sent.";
         } else {
@@ -54,7 +54,7 @@
 
         <div class="container">
             <div class="mail">
-                <form action="" method="POST">
+                <form action="" method="POST"> <!-- contact formulier -->
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required><br><br>
 
@@ -69,6 +69,7 @@
 
                     <input type="submit" value="Send">
                     <?php
+                    //message voor mail confirmation
                 if ($messageSent != "") {
                     echo "<p>$messageSent</p>";
                 }
@@ -85,6 +86,7 @@
 
     </footer>
     <script type="text/javascript">
+        //code voor de dim knop
         window.onload = function() {
             const body = document.body;
 

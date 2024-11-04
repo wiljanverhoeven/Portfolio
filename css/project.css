@@ -1,3 +1,4 @@
+/* voor de informatie over het project */
 .project-details {
   display: flex;
   flex-direction: row;
@@ -17,11 +18,13 @@
   padding: 1%;
 }
 
+/* voor afbeelding van project */
 .project-details img {
   width: 30%;
   margin-right: 2%;
 }
 
+/* voor andere schermen */
 @media only screen and (max-width: 750px) {
   .project-details {
     flex-direction: column;

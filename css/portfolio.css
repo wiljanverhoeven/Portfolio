@@ -6,6 +6,8 @@
   color: white;
 }
 
+/* filter */
+
 .filter {
   height: 5%;
   width: 15%;
@@ -32,6 +34,8 @@
   font-size: 50px;
 }
 
+/* lijst van projecten */
+
 .projects-list {
   height: 60%;
   width: 80%;
@@ -42,6 +46,8 @@
   flex-direction: row;
   justify-content: center;
 }
+
+/* de idividuele project vakjes */
 
 .project {
   display: flex;
@@ -73,6 +79,8 @@
   color: inherit;
   display: block;
 }
+
+/* voor andere schermen */
 
 @media only screen and (max-width: 1605px) {
   .filter {

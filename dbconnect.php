@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "banaan";
-
+//database connectie maken
 try {
   $pdo = new PDO("mysql:host=$servername;dbname=Portfolio", $username, $password);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

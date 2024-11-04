@@ -7,14 +7,14 @@ const canvasSize = body.offsetWidth * body.offsetHeight;
 const starsFraction = canvasSize / 2000;
 
 for (let i = 0; i < starsFraction; i++) {
-  // Set up random elements
+  // zet elementen van sterren klaar
   let xPos = random(0, 100);
   let yPos = random(0, 100);
   let alpha = random(0.5, 1);
   let size = random(1, 2);
   let colour = "#ffffff";
 
-  // Add them to the body
+  // zet de sterren neer
   const star = document.createElement("div");
   star.style.position = "absolute";
   star.style.zIndex = "-1";

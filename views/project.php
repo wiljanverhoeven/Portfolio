@@ -22,13 +22,13 @@
         <?php
         $projectId = isset($_GET['idportfolios']) ? (int)$_GET['idportfolios'] : 0;
 
-        // Prepare and execute query
+        // Prepare en execute query
         $stmt = $pdo->prepare("SELECT * FROM projecten WHERE idportfolios = :idportfolios");
         $stmt->bindParam(':idportfolios', $projectId, PDO::PARAM_INT);
         $stmt->execute();
         $project = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Check for project
+        // displayed project
         if ($project) {
         ?>
             <div class="project-details">
@@ -49,6 +49,7 @@
 
     </footer>
     <script type="text/javascript">
+        //code voor de dim knop
         window.onload = function() {
             const body = document.body;
 
