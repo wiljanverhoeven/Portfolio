@@ -1,62 +1,23 @@
-<!DOCTYPE html>
-<html>
+<?php
+// Autoload classes
+spl_autoload_register(function ($class) {
+    require_once __DIR__ . '/app/' . str_replace('\\', '/', $class) . '.php';
+});
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/homepage.css">
-    <?php include 'dbconnect.php'; ?>
-</head>
+// Parse the URL
+$url = isset($_GET['url']) ? explode('/', trim($_GET['url'], '/')) : ['Home'];
+$controllerName = ucfirst($url[0]) . 'Controller';
+$action = $url[1] ?? 'Home';
 
-<body>
-    <header>
-        <script type="text/javascript" src="js/stars.js"></script>
-        <button id="brightness-toggle">TOGGLE DIM</button>
-    </header>
+// Load and call the controller
+$controllerPath = __DIR__ . '/app/controllers/' . $controllerName . '.php';
 
-    <main>
-        <div class="container">
-            <div class="left">
-                <ul class="menu">
-                    <li><a href="views/portfolio.php" class="selection">PORTFOLIO</a></li>
-                    <li><a href="views/overmij.php" class="selection">OVER MIJ</a></li>
-                    <li><a href="views/contact.php" class="selection">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="right">
-                <!-- maan cyclus animatie -->
-                <img class="mars" src="images/3d-render-mars-planet-360-rotation-on-galaxy-space-star-field-3d-illustration-isolated-transparent-alpha-png.webp">
-                <div class="ani">
-                    <img class="moon" src="images/moon.png" alt="moon">
-                </div>
-            </div>
-        </div>
-    </main>
 
-    <footer>
-    </footer>
-    <script type="text/javascript">
-        //code voor de dim knop
-        window.onload = function() {
-            const body = document.body;
-
-            if (localStorage.getItem('dimMode') === 'on') {
-                body.style.filter = 'brightness(50%)';
-            }
-
-            document.getElementById('brightness-toggle').addEventListener('click', () => {
-                if (body.style.filter === 'brightness(50%)') {
-
-                    body.style.filter = 'none';
-                    localStorage.setItem('dimMode', 'off');
-                } else {
-
-                    body.style.filter = 'brightness(50%)';
-                    localStorage.setItem('dimMode', 'on');
-                }
-            });
-        };
-    </script>
-</body>
-
-</html>
+if (file_exists($controllerPath)) {
+    require_once $controllerPath;
+    $controller = new $controllerName();
+    $controller->$action();
+} else {
+    die("Controller file not found: $controllerPath");
+}
+?>

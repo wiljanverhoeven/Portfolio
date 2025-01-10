@@ -1,45 +1,10 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/contact.css">
-    <?php include '../dbconnect.php'; ?>
-    <?php
-
-    $messageSent = "";
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // haalt data op
-        $name = htmlspecialchars($_POST['name']);
-        $email = htmlspecialchars($_POST['email']);
-        $subject = htmlspecialchars($_POST['subject']);
-        $message = htmlspecialchars($_POST['message']);
-
-
-        $to = "wiljanverhoeven@xs4all.nl";
-        $headers = "From: " . $email . "\r\n";
-        $headers .= "Reply-To: " . $email . "\r\n";
-        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-        // maak email
-        $fullMessage = "Name: $name\n";
-        $fullMessage .= "Email: $email\n\n";
-        $fullMessage .= "Message:\n$message";
-
-
-        // stuur amail
-        if (mail($to, $subject, $fullMessage, $headers)) {
-            $messageSent = "Email sent.";
-        } else {
-            $messageSent = "Could not send email";
-        }
-    } else {
-        echo "Invalid request.";
-    }
-
-    ?>
-
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contact.css">
 </head>
 
 <body>
@@ -47,14 +12,14 @@
     <header>
         <button id="brightness-toggle">TOGGLE DIM</button>
         <br>
-        <a class="nav" href="../">HOME</a>
+        <a class="nav" href="/">HOME</a>
     </header>
-    <script type="text/javascript" src="../js/stars.js"></script>
-    <main>
+    <script type="text/javascript" src="../../js/stars.js"></script>
 
+    <main>
         <div class="container">
             <div class="mail">
-                <form action="" method="POST"> <!-- contact formulier -->
+                <form action="" method="POST"> <!-- Contact form -->
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required><br><br>
 
@@ -68,26 +33,19 @@
                     <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
                     <input type="submit" value="Send">
-                    <?php
-                    //message voor mail confirmation
-                if ($messageSent != "") {
-                    echo "<p>$messageSent</p>";
-                }
-                ?>
+                    <?php if (!empty($messageSent)): ?>
+                        <p><?php echo htmlspecialchars($messageSent); ?></p>
+                    <?php endif; ?>
                 </form>
-                
             </div>
         </div>
-
-
     </main>
 
-    <footer>
+    <footer></footer>
 
-    </footer>
     <script type="text/javascript">
-        //code voor de dim knop
-        window.onload = function() {
+        // Code for dimming the screen
+        window.onload = function () {
             const body = document.body;
 
             if (localStorage.getItem('dimMode') === 'on') {
@@ -96,11 +54,9 @@
 
             document.getElementById('brightness-toggle').addEventListener('click', () => {
                 if (body.style.filter === 'brightness(50%)') {
-
                     body.style.filter = 'none';
                     localStorage.setItem('dimMode', 'off');
                 } else {
-
                     body.style.filter = 'brightness(50%)';
                     localStorage.setItem('dimMode', 'on');
                 }
