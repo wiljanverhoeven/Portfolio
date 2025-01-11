@@ -1,5 +1,4 @@
 <?php
-require_once '../dbconnect.php'; // Include the database connection
 
 class ProjectModel {
     private $pdo;

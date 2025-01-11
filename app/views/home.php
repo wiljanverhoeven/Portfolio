@@ -3,13 +3,14 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/homepage.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    
 </head>
 
 <body>
     <header>
-        <script type="text/javascript" src="../../js/stars.js"></script>
+        <script type="text/javascript" src="./js/stars.js"></script>
         <button id="brightness-toggle">TOGGLE DIM</button>
     </header>
 
@@ -17,16 +18,16 @@
         <div class="container">
             <div class="left">
                 <ul class="menu">
-                    <li><a href="/portfolio" class="selection">PORTFOLIO</a></li>
-                    <li><a href="/overmij" class="selection">OVER MIJ</a></li>
-                    <li><a href="/contact" class="selection">CONTACT</a></li>
+                    <li><a href="/portfolio/portfoliopage" class="selection">PORTFOLIO</a></li>
+                    <li><a href="/portfolio/overmij" class="selection">OVER MIJ</a></li>
+                    <li><a href="/portfolio/contact" class="selection">CONTACT</a></li>
                 </ul>
             </div>
             <div class="right">
                 <!-- Mars and moon animation -->
-                <img class="mars" src="../../images/3d-render-mars-planet-360-rotation-on-galaxy-space-star-field-3d-illustration-isolated-transparent-alpha-png.webp">
+                <img class="mars" src="./images/3d-render-mars-planet-360-rotation-on-galaxy-space-star-field-3d-illustration-isolated-transparent-alpha-png.webp">
                 <div class="ani">
-                    <img class="moon" src="../../images/moon.png" alt="moon">
+                    <img class="moon" src="./images/moon.png" alt="moon">
                 </div>
             </div>
         </div>

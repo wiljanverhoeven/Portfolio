@@ -1,13 +1,16 @@
 <?php
+require_once './app/model/OverMijModel.php';
+
 class OverMijController {
     public function index() {
-        // Load the model
-        require_once '../app/models/OverMijModel.php';
-        $model = new OverMijModel();
-        $personalInfo = $model->getPersonalInfo();
+        // Initialize the model
+        $overMijModel = new OverMijModel();
 
-        // Pass data to the view
-        require_once '../app/views/overmij.php';
+        // Fetch personal information
+        $personalInfo = $overMijModel->getPersonalInfo();
+
+        // Include the "overmij" view and pass the $personalInfo data
+        include './app/views/overmij.php';
     }
 }
 ?>

@@ -3,17 +3,17 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/portfolio.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
 </head>
 
 <body>
     <header>
         <button id="brightness-toggle">TOGGLE DIM</button>
         <br>
-        <a class="nav" href="/">HOME</a>
+        <a class="nav" href="/portfolio/home">HOME</a>
     </header>
-    <script type="text/javascript" src="/js/stars.js"></script>
+    <script type="text/javascript" src="./js/stars.js"></script>
 
     <main>
         <form class="filter" method="GET" action="">
@@ -31,7 +31,7 @@
                 <?php foreach ($projects as $project): ?>
                     <div class="project">
                         <a href="/views/project.php?idportfolios=<?= htmlspecialchars($project['idportfolios']); ?>" class="project-link">
-                            <img class="projectimg" src="../../images/<?= htmlspecialchars($project['imagesrc']); ?>" alt="project">
+                            <img class="projectimg" src="./images/<?= htmlspecialchars($project['imagesrc']); ?>" alt="project">
                             <h1><?= htmlspecialchars($project['projectname']); ?></h1>
                         </a>
                     </div>

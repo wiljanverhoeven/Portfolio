@@ -3,17 +3,17 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/overmij.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/overmij.css">
 </head>
 
 <body>
     <header>
         <button id="brightness-toggle">TOGGLE DIM</button>
         <br>
-        <a class="nav" href="/">HOME</a>
+        <a class="nav" href="/portfolio/home">HOME</a>
     </header>
-    <script type="text/javascript" src="../../js/stars.js"></script>
+    <script type="text/javascript" src="./js/stars.js"></script>
 
     <main>
         <div class="container">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="right">
-                <img class="picture" src="../../<?= htmlspecialchars($personalInfo['profileImage']); ?>" alt="Profile Picture">
+                <img class="picture" src="./<?= htmlspecialchars($personalInfo['profileImage']); ?>" alt="Profile Picture">
             </div>
         </div>
     </main>

@@ -1,5 +1,5 @@
 <?php
-class PortfolioModel {
+class PortfolioPageModel {
     private $pdo;
 
     public function __construct($pdo) {
