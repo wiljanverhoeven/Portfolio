@@ -30,7 +30,7 @@
             <div class="projects-list">
                 <?php foreach ($projects as $project): ?>
                     <div class="project">
-                        <a href="/views/project.php?idportfolios=<?= htmlspecialchars($project['idportfolios']); ?>" class="project-link">
+                    <a href="/portfolio/project?id=<?= htmlspecialchars($project['idportfolios']); ?>" class="project-link">
                             <img class="projectimg" src="./images/<?= htmlspecialchars($project['imagesrc']); ?>" alt="project">
                             <h1><?= htmlspecialchars($project['projectname']); ?></h1>
                         </a>

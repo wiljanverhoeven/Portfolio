@@ -16,7 +16,7 @@
         <br>
         <a class="nav" href="/portfolio/portfoliopage">BACK</a>
     </header>
-    <script type="text/javascript" src="../js/stars.js"></script>
+    <script type="text/javascript" src="./js/stars.js"></script>
     <main>
         <?php if ($project) { ?>
             <div class="project-details">
