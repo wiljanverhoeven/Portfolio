@@ -6,7 +6,9 @@ class PortfolioPageModel {
         $this->pdo = $pdo;
     }
 
+    //fetches projects from database
     public function getProjects($categorie = null) {
+        //checks for applied filter
         if ($categorie) {
             $stmt = $this->pdo->prepare("SELECT * FROM projecten WHERE categorie = :categorie");
             $stmt->bindParam(':categorie', $categorie);

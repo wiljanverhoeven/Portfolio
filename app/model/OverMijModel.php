@@ -1,5 +1,6 @@
 <?php
 class OverMijModel {
+
     public function getPersonalInfo() {
         return [
             'name' => 'Wiljan Verhoeven',

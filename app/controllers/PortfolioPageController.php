@@ -9,16 +9,15 @@ class PortfolioPageController {
     }
 
     public function index() {
-        // Initialize the model
+  
         $portfolioModel = new PortfolioPageModel($this->pdo);
 
-        // Get the selected category from the GET parameters, if available
+        // fetch selected category
         $categorie = isset($_GET['categorie']) ? htmlspecialchars($_GET['categorie']) : null;
 
-        // Fetch projects, optionally filtered by category
+        // Fetch projects
         $projects = $portfolioModel->getProjects($categorie);
 
-        // Include the portfolio view and pass the $projects data
         include './app/views/portfoliopage.php';
     }
 }

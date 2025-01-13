@@ -16,13 +16,10 @@ if (strpos($request, '?') !== false) {
 // Trim any trailing slashes
 $request = rtrim($request, '/');
 
-// Default to /home if the request is empty
+// Default to home if the request is empty
 if (empty($request) || $request == '/' || $request == '/portfolio') {
     $request = '/portfolio/home'; // Set /home as the default route
 }
-
-// Echo the request to debug
-echo "Request: " . $request . "<br>"; // Debugging line
 
 // Route handling
 switch ($request) {

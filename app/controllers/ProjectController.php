@@ -8,21 +8,20 @@ class ProjectController {
         $this->pdo = $pdo;
     }
 
+    //fetches the information for the selected project
     public function index() {
-        // Check if `id` is provided in the query string
+        // Check for id
         if (isset($_GET['id']) && is_numeric($_GET['id'])) {
             $projectId = intval($_GET['id']);
             
-            // Instantiate the ProjectModel
             $projectModel = new ProjectModel($this->pdo);
             
-            // Fetch the project details by ID
+            // Fetch the projects infromation by ID
             $project = $projectModel->getProjectById($projectId);
-            
-            // Include the project view
+
             require './app/views/project.php';
         } else {
-            // If `id` is not provided or invalid, show an error message
+            // If id is invalid
             echo "Invalid project ID.";
         }
     }
