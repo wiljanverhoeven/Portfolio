@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'portfolio';
 $username = 'root';  
-$password = 'banaan';   
+$password = '';   
 
 try {
     // Create a new PDO instance

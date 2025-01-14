@@ -10,9 +10,9 @@
 
 <body>
     <header>
-        <script type="text/javascript" src="./js/stars.js"></script>
         <button id="brightness-toggle">TOGGLE DIM</button>
     </header>
+    <script type="text/javascript" src="./js/stars.js"></script>
 
     <main>
         <div class="container">
